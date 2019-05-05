@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Exercise 3</title>
+		<link rel="stylesheet" href="assets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+		<!--BootstrapCDN v4.3.1-->
+	  	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+	</head>
+	<body>
+		
+	<div class="container">
+		<h2>Data Anggota Marvel</h2>
+		<table class="table">
+			<caption></caption>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nama</th>
+					<th>Usia</th>
+					<th>Kekuatan</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td id="id1"></td>
+					<td id="nama1"></td>
+					<td id="usia1"></td>
+					<td id="kekuatan1"></td>
+				</tr>
+				<tr>
+					<td id="id2"></td>
+					<td id="nama2"></td>
+					<td id="usia2"></td>
+					<td id="kekuatan2"></td>
+				</tr>
+				<tr>
+					<td id="id3"></td>
+					<td id="nama3"></td>
+					<td id="usia3"></td>
+					<td id="kekuatan3"></td>
+				</tr>
+				<tr>
+					<td id="id4"></td>
+					<td id="nama4"></td>
+					<td id="usia4"></td>
+					<td id="kekuatan4"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<br>
+
+	<div class="container">
+		<button type="button" onclick="marvelku()" value="Submit">SortByName</button>
+		<br>
+		<p>Data Marvel Urut Berdasarkan Nama :</p>
+		<p id="urutinnama" style="font-size: 30px"></p>
+	</div>
+
+	<script>
+		
+		var id1 = "TH";
+		var nama1 = "Thor"
+		var usia1 = 35;
+		var kekuatan1 = "Palu"
+
+		var id2 = "CA";
+		var nama2 = "Captain America"
+		var usia2 = 38;
+		var kekuatan2 = "Perisai"
+
+		var id3 = "IM";
+		var nama3 = "Iron Man"
+		var usia3 = 40;
+		var kekuatan3 = "Robot"
+
+		var id4 = "SM";
+		var nama4 = "Spiderman"
+		var usia4 = 25;
+		var kekuatan4 = "Jaring Laba-Laba"
+
+		document.getElementById('id1').innerHTML = id1;
+		document.getElementById('nama1').innerHTML = nama1;
+		document.getElementById('usia1').innerHTML = usia1;
+		document.getElementById('kekuatan1').innerHTML = kekuatan1;
+
+		document.getElementById('id2').innerHTML = id2;
+		document.getElementById('nama2').innerHTML = nama2;
+		document.getElementById('usia2').innerHTML = usia2;
+		document.getElementById('kekuatan2').innerHTML = kekuatan2;
+
+		document.getElementById('id3').innerHTML = id3;
+		document.getElementById('nama3').innerHTML = nama3;
+		document.getElementById('usia3').innerHTML = usia3;
+		document.getElementById('kekuatan3').innerHTML = kekuatan3;
+
+		document.getElementById('id4').innerHTML = id4;
+		document.getElementById('nama4').innerHTML = nama4;
+		document.getElementById('usia4').innerHTML = usia4;
+		document.getElementById('kekuatan4').innerHTML = kekuatan4;
+
+		var marvelName = ['Captain Marvel', 'Iron Man', 'Thor', 'Spiderman'];
+		function marvelku() {
+			marvelName.sort();
+			document.getElementById('urutinnama').innerHTML = marvelName;
+		}
+		
+		var marvelId = [40, 38, 35, 25]
+		marvelId.sort();
+		console.log(marvelId);
+
+	</script>
+
+	</body>
+</html>
